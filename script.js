@@ -38,7 +38,7 @@ stayButton.style.display = 'none';
 showStatus();
 
 
-newGameButton.addEventListener('click', function() {
+newGameButton.addEventListener('click', function () {
   playerWon = false,
     gameOver = false,
     gameStarted = true;
@@ -67,13 +67,13 @@ newGameButton.addEventListener('click', function() {
   console.log(dealerCards);
 });
 
-hitButton.addEventListener('click', function() {
+hitButton.addEventListener('click', function () {
   playerCards.push(getNextcard());
   checkForEndOfGame();
   showStatus();
 });
 
-stayButton.addEventListener('click', function() {
+stayButton.addEventListener('click', function () {
   gameOver = true;
   checkForEndOfGame();
   showStatus();
