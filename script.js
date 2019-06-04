@@ -112,9 +112,8 @@ function checkForEndOfGame() {
 
   if (gameOver) {
     //Let Dealer Take the cards 
-    while (dealerScore <= playerScore &&
-      playerScore <= 21 &&
-      dealerScore <= 21) {
+    while ( playerScore <= 21 &&
+      dealerScore < 17 ) {
       dealerCards.push(getNextcard());
       UpdateScores();
     }
@@ -239,7 +238,7 @@ function showStatus() {
     if (playerWon) {
       gameResult.innerText = 'Player Won the Game';
       playerWins++;
-    } else if (dealerScore == 21 && playerScore == 21) {
+    } else if ((dealerScore == 21 && playerScore == 21) || dealerScore==playerScore) {
       gameResult.innerText = 'Game is Tie';
     } else {
       gameResult.innerText = 'Dealer Won the Game';
