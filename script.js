@@ -1,12 +1,12 @@
 // Code goes here
 
 //DOM variables 
+
 let textArea = document.getElementById('text-area');
 let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
 let gameResult = document.getElementById('game-result');
-
 
 
 //Card Variables 
@@ -203,7 +203,7 @@ function UpdateScores() {
 function showStatus() {
 
   if (!gameStarted) {
-    textArea.innerText = 'Welcome to BlackJack';
+    textArea.innerText = 'Click new game for getting started...';
     return;
   }
 
